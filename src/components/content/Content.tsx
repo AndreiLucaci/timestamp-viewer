@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 
 import Typography from "@mui/material/Typography";
-import { Box, Button, Grid, Input } from "@mui/material";
+import { Box, Button, Grid, Input, TextField } from "@mui/material";
 
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -75,7 +75,9 @@ function fixedHeaderContent() {
 export default function Content() {
   const [timestamp, setTimestamp] = useState<Date>();
 
-  const validateStringTimestamp = (timestamp: string) => {
+  const validateStringTimestamp = (timestamp: string | undefined) => {
+    if (!timestamp) return false;
+
     const timestampRegex = new RegExp("^[0-9]{13}$");
     return timestampRegex.test(timestamp);
   };
@@ -104,6 +106,8 @@ export default function Content() {
     }
   }, []);
 
+  const [errorMsg, setErrorMsg] = useState<string>();
+
   function rowContent(_index: number, row: Timestamp) {
     return (
       <React.Fragment>
@@ -128,21 +132,28 @@ export default function Content() {
     );
   }
 
+  const [internalTimestamp, setInternalTimestamp] = useState<string>();
+
   return (
     <div className="content">
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid xs={12}>
-            <Input
+            <TextField
               className="input-timestamp"
               placeholder="Enter a UNIX timestamp"
+              error={errorMsg ? true : false}
+              helperText={errorMsg}
+              inputProps={{ min: 0, style: { textAlign: "center" } }}
+              onChange={(e) => setInternalTimestamp(e.target.value as any)}
               onKeyUp={(e) => {
                 if (e.key === "Enter") {
-                  if (validateStringTimestamp(e.currentTarget.value)) {
+                  if (validateStringTimestamp(internalTimestamp)) {
                     const convertedTimestamp = convertTimestamp(
-                      e.currentTarget.value
+                      internalTimestamp!
                     );
                     if (convertedTimestamp) {
+                      setErrorMsg(undefined);
                       setTimestamp(convertedTimestamp);
                       const newTimestampList = [
                         ...timestampList,
@@ -157,10 +168,10 @@ export default function Content() {
                         JSON.stringify(newTimestampList)
                       );
                     } else {
-                      alert("Invalid timestamp");
+                      setErrorMsg("Invalid timestamp");
                     }
                   } else {
-                    alert("Invalid string provided");
+                    setErrorMsg("Invalid string provided");
                   }
                 }
               }}
