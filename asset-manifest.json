@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/timestamper/static/css/main.073c9b0a.css",
-    "main.js": "/timestamper/static/js/main.df4d113e.js",
+    "main.css": "/timestamper/static/css/main.cfa668a6.css",
+    "main.js": "/timestamper/static/js/main.66eb2a7b.js",
     "static/js/787.2ffa300f.chunk.js": "/timestamper/static/js/787.2ffa300f.chunk.js",
-    "static/media/logo.svg": "/timestamper/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/timestamper/index.html",
-    "main.073c9b0a.css.map": "/timestamper/static/css/main.073c9b0a.css.map",
-    "main.df4d113e.js.map": "/timestamper/static/js/main.df4d113e.js.map",
+    "main.cfa668a6.css.map": "/timestamper/static/css/main.cfa668a6.css.map",
+    "main.66eb2a7b.js.map": "/timestamper/static/js/main.66eb2a7b.js.map",
     "787.2ffa300f.chunk.js.map": "/timestamper/static/js/787.2ffa300f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.df4d113e.js"
+    "static/css/main.cfa668a6.css",
+    "static/js/main.66eb2a7b.js"
   ]
 }
