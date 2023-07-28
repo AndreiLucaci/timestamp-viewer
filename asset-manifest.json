@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/timestamper/static/css/main.cfa668a6.css",
-    "main.js": "/timestamper/static/js/main.5d0db6d6.js",
+    "main.css": "/timestamper/static/css/main.d17dcd22.css",
+    "main.js": "/timestamper/static/js/main.20bf732a.js",
     "static/js/787.2ffa300f.chunk.js": "/timestamper/static/js/787.2ffa300f.chunk.js",
     "index.html": "/timestamper/index.html",
-    "main.cfa668a6.css.map": "/timestamper/static/css/main.cfa668a6.css.map",
-    "main.5d0db6d6.js.map": "/timestamper/static/js/main.5d0db6d6.js.map",
+    "main.d17dcd22.css.map": "/timestamper/static/css/main.d17dcd22.css.map",
+    "main.20bf732a.js.map": "/timestamper/static/js/main.20bf732a.js.map",
     "787.2ffa300f.chunk.js.map": "/timestamper/static/js/787.2ffa300f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cfa668a6.css",
-    "static/js/main.5d0db6d6.js"
+    "static/css/main.d17dcd22.css",
+    "static/js/main.20bf732a.js"
   ]
 }
