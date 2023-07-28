@@ -1,0 +1,26 @@
+.input-timestamp {
+  width: 60%;
+  height: 60%;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.content {
+  margin-top: 2%;
+}
+
+.list {
+  margin-top: 2%;
+}
+
+.current-timestamp {
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
